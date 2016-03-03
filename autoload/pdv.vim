@@ -49,7 +49,10 @@ let s:regex["abstract"] = '\(abstract\)'
 let s:regex["final"] = '\(final\)'
 
 " [:space:]*(private|protected|public|static|abstract)*[:space:]+[:identifier:]+\([:params:]\)
-let s:regex["function"] = '^\(\s*\)\([a-zA-Z ]*\)function\s\+\([^ (]\+\)\s*('
+"let s:regex["function"] = '^\(\s*\)\([a-zA-Z ]*\)function\s\+\([^ (]\+\)\s*('
+" [:space:]*[:space:]+[:identifier:]+\([:params:]\)
+let s:regex["function"] = '^\(\s*\)def\s\+\([^ (]\+\)\s*('
+
 " [:typehint:]*[:space:]*$[:identifier]\([:space:]*=[:space:]*[:value:]\)?
 let s:regex["param"] = ' *\([^ &]*\)\s*\(&\?\)\$\([^ =)]\+\)\s*\(=\s*\(.*\)\)\?$'
 
